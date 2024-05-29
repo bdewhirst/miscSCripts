@@ -5,6 +5,11 @@ import html_constants as _html
 
 
 class toFoxResult:
+    """
+    Given CLI filepath and split character values, this translates a certain
+    flat file (see input-template.txt) to generate simple html that firefox can
+    import.
+    """
     def __init__(self):
         self.filepath: pathlib.Path = pathlib.Path(sys.argv[1])
         self.split: str = sys.argv[2]
@@ -61,6 +66,7 @@ class toFoxResult:
 
 
 def update_result(prev_result: str, addition: str) -> str:
+    # combines two strings without adding whitespace; syntactic convenience/preference
     result = "".join([prev_result, addition])
     return result
 
