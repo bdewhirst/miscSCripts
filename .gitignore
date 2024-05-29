@@ -1,3 +1,6 @@
 .idea/*
 corpus/*.txt
 output.*
+
+__pycache__/*
+*.pyc
