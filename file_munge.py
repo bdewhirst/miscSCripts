@@ -86,4 +86,6 @@ if __name__ == "__main__":
     SPLIT: str = "|"
 
     result = main(filepath=FILEPATH)
-    print(result)
+    # print(result)
+    with open("output.txt", "w") as output_file:
+        output_file.write(result)
