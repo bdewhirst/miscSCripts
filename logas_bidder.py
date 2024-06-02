@@ -1,13 +1,10 @@
 import random
 
 
-ATTRS = set("psyche", "strength", "endurance", "warfare")
-
-
 class LogasAuction:
-    # run a lords of gossamer and shadow (TTRPG) auction, with specified virtual bidders plus the player
+    # simulate a lords of gossamer and shadow (TTRPG) auction, with specified virtual bidders plus the player
     def __init__(self, names: list):
-        self.names = names
+        self.names = names  # instead pass list of Bidder objects?
         self.categories = ""
         self.dft_points = 100
 
@@ -48,20 +45,13 @@ class Bidder:
         self.warfare: int = 0
 
 
+
+
 if __name__ == "__main__":
-    auction = LogasAuction(["Jim", "Jane", "Semour"])
+    jim = Bidder(name="Jim")
+    jane = Bidder(name="Jane")
+    semour = Bidder(name="Semour")
+    auction = LogasAuction([jim, jane, semour])
 
+    # likely will be an abandoned project, as I've worked out what I intended to here.
     auction.report_result()
-
-"""
-'Pen and paper' notes from notional auction
-
-
-
-
-
-
-
-
-
-"""
