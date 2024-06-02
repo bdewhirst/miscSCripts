@@ -44,6 +44,9 @@ class Bidder:
         self.endurance: int = 0
         self.warfare: int = 0
 
+    def print_character(self):
+        print(self.name, "psyche:", self.psyche, "strength:", self.strenght, "endurance:", self.endurance, "warfare:", self.warfare, "stuff and powers:", (100 - self.points))
+
 
 
 
