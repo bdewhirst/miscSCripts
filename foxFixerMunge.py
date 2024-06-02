@@ -10,6 +10,7 @@ class toFoxResult:
     flat file (see input-template.txt) to generate simple html that firefox can
     import.
     """
+
     def __init__(self):
         self.filepath: pathlib.Path = pathlib.Path(sys.argv[1])
         self.split: str = sys.argv[2]
